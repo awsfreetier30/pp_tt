@@ -1,75 +1,3 @@
-```markdown
-# Static Website Deployment with GitHub Actions and AWS EC2
-
-This project demonstrates how to set up and deploy a static website using GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD) to an Amazon Web Services (AWS) EC2 instance.
-
-## Scope of the Project
-
-This project demonstrates the setup and deployment of a static website using GitHub Actions for Continuous Integration and Continuous Deployment (CI/CD) to an Amazon Web Services (AWS) EC2 instance. It covers version control, automated deployment workflows, cloud infrastructure setup, and web server configuration.
-
-## Pre-requisites and Technology Stack
-
-### Type: Intermediate
-
-### Technologies Used:
-
-- Git and GitHub for version control
-- GitHub Actions for CI/CD
-- AWS EC2 for hosting
-- Apache web server
-- Bash scripting
-- SSH for secure connections
-
-### Pre-requisites:
-
-- Basic understanding of Git and GitHub
-- Familiarity with cloud concepts and AWS
-- Knowledge of Linux command line
-- Understanding of web servers and static websites
-
-## Step-by-step Approach
-
-1. Set up local environment and repository
-2. Create GitHub Actions workflow
-3. Set up AWS EC2 instance
-4. Configure EC2 instance
-5. Configure GitHub repository secrets
-6. Set up Git authentication
-7. Push changes to GitHub
-8. Monitor deployment
-9. Verify deployment
-10. Troubleshoot if necessary
-11. Update website as needed
-
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Prerequisites](#prerequisites)
-3. [Setup Instructions](#setup-instructions)
-4. [Deployment Process](#deployment-process)
-5. [Troubleshooting](#troubleshooting)
-6. [Updating the Website](#updating-the-website)
-
-## Project Overview
-
-This project covers:
-
-- Setting up a GitHub repository for a static website
-- Configuring GitHub Actions for automated deployment
-- Launching and configuring an AWS EC2 instance
-- Setting up Apache web server on EC2
-- Implementing secure file transfer and server management
-
-## Prerequisites
-
-- Git and GitHub account
-- AWS account with EC2 access
-- Basic understanding of:
-  - Git version control
-  - Linux command line
-  - Web servers and static websites
-  - Cloud computing concepts
-
 ## Setup Instructions
 
 ### 1. Local Environment Setup
@@ -170,7 +98,6 @@ echo "EC2 instance setup complete!"
 ### 5. GitHub Repository Configuration
 
 Add the following secrets to your GitHub repository:
-
 - `AWS_ACCESS_KEY_ID`
 - `AWS_SECRET_ACCESS_KEY`
 - `EC2_SSH_PRIVATE_KEY`
@@ -202,11 +129,11 @@ git remote set-url origin https://YOUR-USERNAME:YOUR-TOKEN@github.com/awsfreetie
 
 - Check GitHub Actions logs for error messages
 - SSH into EC2 and check Apache logs:
-  ```bash
+  ```
   sudo tail -f /var/log/apache2/error.log
   ```
 - Verify file permissions on EC2:
-  ```bash
+  ```
   sudo chown -R ubuntu:ubuntu /var/www/html
   sudo chmod -R 755 /var/www/html
   ```
@@ -218,6 +145,3 @@ git remote set-url origin https://YOUR-USERNAME:YOUR-TOKEN@github.com/awsfreetie
 3. GitHub Actions will automatically deploy updates to EC2
 
 For any issues or questions, please open an issue in the GitHub repository.
-```
-
-With this `README.md` file, your GitHub repository will be well-documented and provide clear guidance for setting up and deploying the project.
